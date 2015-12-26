@@ -111,7 +111,7 @@ git add 1.txt
 git commit -m- "Fichero 1.txt creado" 1.txt
 ```
 
-### Creando etiquetas
+### Crear etiquetas
 Para crear una etiqueta o 'tag', utilizaremos el comando 'tag':
 
 #### Tag v0.1
@@ -125,11 +125,41 @@ git push --tag origin master
 ```
 La consola nos debería mostrar el éxito de la operación.
 
-#### Crear una rama v0.2
+### Crear una rama v0.2
 Para crear una rama utilizaremos el comando 'branch':
 ```bash
 git branch v0.2
 ```
+Nos posicionaremos dentro de esta nueva rama utilizando el comando 'checkout' 
+> Los cambios no guardados en la rama actual se perderán!
+```bash
+git checkout v0.2
+```
+Añadimos el fichero 2.txt
+```bash
+type NUL > 2.txt
+git add .
+git commit -m- "Fichero 2.txt creado" .
+```
+
+Y subimos los cambios al repositorio remoto:
+```bash
+git push origin v0.2
+```
+
+### Merge
+Para fusionar cambios utilizaremos el comando 'merge'. Existen varios tipos de 'merge' o fusiones.
+
+#### Merge directo
+1. Posicionarse en la rama master
+```bash
+git checkout master
+```
+2. Hacer un merge de la rama v0.2 en la rama master
+```bash
+git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
+```
+
 
 
 
