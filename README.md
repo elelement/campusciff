@@ -76,6 +76,49 @@ Finalmlente, realizamos el commit. La opción '-m', permite introducir un mensaj
 > git commit -m "commit inicial"
 ```
 
+### Push inicial
+Para sincronizar nuestros cambios con el repositorio remoto, tendremos que utilizar el comando 'push' sobre la rama que deseemos. En este caso sólo hay una, 'master', que se crea por defecto al crear el repositorio en Github.
+```bash
+> git push origin master
+```
+
+### Ignorar archivos (I)
+
+1. Crear en el repositorio local un fichero llamado privado.txt:
+```bash
+touch privado.txt
+```
+
+2. Crear en el repositorio local una carpeta llamada privada.
+```bash
+mkdir privada
+```
+
+### Ignorar archivos (II)
+
+Realizar los cambios oportunos para que tanto el archivo como la carpeta sean ignorados por git. Para ello, crearemos un fichero llamado '.gitignore' añadiendo las entradas a ignorar:
+```bash
+privada/
+privado.txt
+git add .gitignore
+git commit -m "Añadido fichero .gitignore" .gitignore
+```
+
+### Añadir fichero 1.txt
+```bash
+type NUL > 1.txt
+git add 1.txt
+git commit -m- "Fichero 1.txt creado" 1.txt
+```
+
+### Creando etiquetas
+Para crear una etiqueta o 'tag', utilizaremos el comando 'tag':
+
+#### Tag v0.1
+```bash
+git tag -a v0.1 -m "Nuevo tag v0.1"
+```
+
 
 
 
