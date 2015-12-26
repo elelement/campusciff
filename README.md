@@ -220,3 +220,31 @@ git tag -a v0.2 -m "Creado tag v0.2"
 ```bash
 git branch -d v0.2
 ```
+
+### Listado de cambios
+Listar los distintos commits con sus ramas y sus tags:
+```bash
+> git log --oneline --decorate --graph
+```
+La consola nos muestra lo siguiente:
+```
+*   047c3f6 (HEAD -> master, tag: v0.2) Conflicto arreglado
+|\
+| * e32b95b Conflicto parte II
+* | ee722c7 Añadidas modificaciones README
+* | dc634e8 Conflicto parte I
+|/
+* 82d2dcd (origin/v0.2) Nuevos cambios en README hechos antes del merge que necesitan ser subidos
+* a644807 Fichero 2.txt creado
+* e552239 (tag: v0.1, origin/master, origin/HEAD) Modificaciones README
+* c71492a Fichero 1.txt creado
+* 3122d3e Añadido fichero .gitignore
+* be602dd commit inicial
+* fd0f55f Initial commit
+```
+
+Se puede crear un alias para esta operación:
+```bash
+git config --global alias.list 'log --oneline --decorate --graph -all'
+```
+
