@@ -161,14 +161,62 @@ git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
 ```
 
 #### Merge con conflicto (I)
+En la rama master poner "Hola" en el fichero 1.txt y hacer commit:
 ```bash
 echo "Hola" > 1.txt
 git add .
-git commit -m "Conflicto parte I" 1.txt"
+git commit -m "Conflicto parte I" .
 ```
 
 #### Merge con conflicto (II)
+Posicionarse en la rama v0.2 y poner "Adiós" en el fichero "1.txt" y hacer commit:
 ```bash
-git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
+git checkout v0.2
+echo "Adios" > 1.txt 
+git add .
+git commit -m "Conflicto parte II" .
 ```
 
+#### Merge con conflicto (III)
+Posicionarse de nuevo en la rama master y hacer un merge con la rama v0.2:
+```bash
+git checkout master
+git merge v0.2 -m "Conflicto v0.2 en master resuelto"
+```
+
+### Listado de ramas
+1. Listar las ramas con merge:
+```bash
+git branch --merged
+```
+2. Listar las ramas sin merge:
+```bash
+git branch --no-merged
+```
+
+### Resolver el conflicto 
+Si mostramos el contenido del fichero 1.txt podemos observar que existe un conflicto:
+```
+<<<<<<< HEAD
+Hola
+=======
+Adios
+>>>>>>> v0.2
+```
+Lo que queda entre el "<<<<<<< HEAD" y el "========" es lo que había en la rama master y lo que encierra "========" y ">>>>>>> v0.2" lo que tiene la rama v0.2.
+
+Editamos el fichero a mano y dejamos el mensaje "Adios" únicamente:
+```
+Adios
+```
+
+### Borrar ramas
+Antes de borrar la rama v0.2, crearemos un tag con el mismo nombre:
+1. Crear un tag:
+```bash
+git tag -a v0.2 -m "Creado tag v0.2"
+```
+2. Y borramos la rama
+```bash
+git branch -d v0.2
+```
