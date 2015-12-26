@@ -161,5 +161,14 @@ git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
 ```
 
 #### Merge con conflicto (I)
+```bash
+echo "Hola" > 1.txt
+git add .
+git commit -m "Conflicto parte I" 1.txt"
+```
 
+#### Merge con conflicto (II)
+```bash
+git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
+```
 
