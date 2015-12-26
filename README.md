@@ -119,6 +119,17 @@ Para crear una etiqueta o 'tag', utilizaremos el comando 'tag':
 git tag -a v0.1 -m "Nuevo tag v0.1"
 ```
 
+#### Subir el tag v0.1
+```bash
+git push --tag origin master
+```
+La consola nos debería mostrar el éxito de la operación.
+
+#### Crear una rama v0.2
+Para crear una rama utilizaremos el comando 'branch':
+```bash
+git branch v0.2
+```
 
 
 
