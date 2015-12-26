@@ -220,6 +220,10 @@ git tag -a v0.2 -m "Creado tag v0.2"
 ```bash
 git branch -d v0.2
 ```
+Para borrar la rama remotamente podemos utilizar el siguiente comando:
+```bash
+git push origin --delete v0.2
+```
 
 ### Listado de cambios
 Listar los distintos commits con sus ramas y sus tags:
@@ -248,3 +252,30 @@ Se puede crear un alias para esta operación:
 git config --global alias.list 'log --oneline --decorate --graph -all'
 ```
 
+## Cuenta de GitHub
+Aspectos relacionados con nuestra cuenta de GitHub
+
+### Poner una foto en vuestro perfil de GitHub.
+Basta con ir a la pestaña de "Profile", en la sección de configuración o "Settings".
+![imagen_perfil](images/imagen_perfil.png)
+
+### Poner el doble factor de autentificación en vuestra cuenta de GitHub.
+Basta con activarla desde la pestaña "Security":
+
+![imagen_perfil](images/dos_pasos.png)
+
+### Añadir (si no lo habéis hecho ya) la clave pública que se corresponde a tu ordenador.
+Ya fue añadida con anterioridad:
+![imagen_perfil](images/clave.png)
+
+## Uso social de GitHub
+En esta sección se detalla el aspecto social de GitHub.
+
+### Preguntar los nombres de usuario de GitHub de tus compañeros de clase, búscalos, y sigueles.
+![imagen_perfil](images/following.png)
+
+### Seguir los repositorios campusciff del resto de tus compañeros.
+![imagen_perfil](images/watching.png)
+
+### Añadir una estrella a los repositorios campusciff del resto de tus compañeros.
+![imagen_perfil](images/starred.png)
