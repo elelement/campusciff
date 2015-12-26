@@ -160,6 +160,6 @@ git checkout master
 git merge v0.2 -m "Merge de la rama v0.2 en la rama master"
 ```
 
-
+#### Merge con conflicto (I)
 
 
