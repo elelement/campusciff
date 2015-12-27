@@ -210,6 +210,15 @@ Editamos el fichero a mano y dejamos el mensaje "Adios" únicamente:
 Adios
 ```
 
+Subimos el fichero al repositorio local utilizando el comando:
+```bash
+git commit -i 1.txt
+``` 
+o, alternativamente:
+```bash
+git commit -am 1.txt
+``` 
+
 ### Borrar ramas
 Antes de borrar la rama v0.2, crearemos un tag con el mismo nombre:
 1. Crear un tag:
@@ -279,3 +288,51 @@ En esta sección se detalla el aspecto social de GitHub.
 
 ### Añadir una estrella a los repositorios campusciff del resto de tus compañeros.
 ![imagen_perfil](images/starred.png)
+
+## Tablas
+Crear una tabla de este estilo en el fichero README.md con la información de varios de tus compañeros de clase:
+
+|NOMBRE|GITHUB|
+|--------|--------|
+|Macarena Garañena|https://github.com/macarenagaranena|
+|Daniel Escuder|https://github.com/Danielobit|
+|Alejandro Díaz|https://github.com/adiazgalache|
+|Aldolfo Sanz|https://github.com/asanzdiego|
+
+## Colaboradores
+Poner a github.com/asanzdiego como colaborador del repositorio campusciff:
+
+![collaborators](images/collaborators.png)
+
+## Crear una organización
+Crear una organización llamada campusciff-tunombredeusuariodegithub:
+
+![organization](images/organization.png)
+
+## Crear equipos
+1. Crear 2 equipos en la organización campusciff-tunombredeusuariodegithub, uno llamado administradores con más permisos y otro colaboradores con menos permisos.
+**Administradores**
+![team_admins](images/team_admins.png)
+**Colaboradores**
+![team_colaboradores](images/team_colaboradores.png)
+
+2. (y 3.) Meter a github.com/asanzdiego y a 2 de vuestros compañeros de clase en el equipo administradores y colaboradores.
+![team_miembros](images/team_miembros.png)
+
+## Crear un index.html
+Se crea un index.html dentro del repositorio y se accede a la web introduciendo campusciff-elelement.github.io:
+![web_org](images/web_org.png)
+
+## Crear Pull Requests
+1. Hacer 2 forks de 2 repositorios campusciff-tunombredeusuariodegithub.github.io de 2 organizaciones de las que no seais ni administradiores ni colaboradores:
+![forks](images/forks.png)
+
+2. Creamos una rama en cada fork
+Rama b-jmcabrera creada para cada repositorio
+
+3. Pull requests
+![pull_requests](images/pull_requests.png)
+
+## Gestionar Pull Requests
+![pull_requests_2](images/pull_requests_2.png)
+
